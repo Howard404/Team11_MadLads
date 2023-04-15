@@ -17,25 +17,25 @@
 
     <nav class="nav-filter">
         <h3 class="filter-p">Filter by category</h3>
-        <button data-filter="all" class="btn">All</button>
-        <button data-filter="adventure" class="btn">Adventure</button>
-        <button data-filter="spanish" class="btn">Spanish/Español</button>
-        <button data-filter="action" class="btn">Action</button>
-        <button data-filter="mystery" class="btn">Mystery</button>
+        <button class="btn" data-filter="all" id="firstBtn">All</button>
+        <button class="btn" data-filter="adventure">Adventure</button>
+        <button class="btn" data-filter="spanish">Spanish/Español</button>
+        <button class="btn" data-filter="action">Action</button>
+        <button class="btn" data-filter="mystery">Mystery</button>
     </nav>
 
     <main class="main">
         <section class="story-grid">
-            <article class="adventure">
+            <article class="art" data-filter="adventure">
                 <h1>Hiking the mountains</h1>
             </article>
-            <article class="spanish">
+            <article class="art" data-filter="spanish">
                 <h1>Dia de los muertos</h1>
             </article>
-            <article class="action">
+            <article class="art" data-filter="action">
                 <h1>Robot Apocalypse</h1>
             </article>
-            <article class="mystery">
+            <article class="art" data-filter="mystery">
                 <h1>Secret Lives of Cats</h1>
             </article>
         </section>
