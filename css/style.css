@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: system-ui;
+    letter-spacing: 0.02rem;
+}
+
+/* General Settings */
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary-site-margin: 0.7rem;
+}
+
+/* Header styling */
+header.main-header {
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+header.main-header h1 {
+    font-size: 4vw;
+}
+
+/* Filter nav styling */
+nav.nav-filter {
+    margin: var(--primary-site-margin);
+    text-align: center;
+}
+
+nav.nav-filter>button {
+    outline: 0;
+    border: 1px solid #333;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    background-color: white;
+    font-size: 1rem;
+    border-radius: 3px;
+    margin: 0.333rem;
+}
+
+nav.nav-filter>button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: whitesmoke;
+}
+
+/* Active class actived in JS to change button colors on click*/
+button.btn.active {
+    background-color: black;
+    color: whitesmoke;
+}
+
+/* Main styling */
+main section.story-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Article styling */
+main.main section article {
+    min-height: 200px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    text-align: center;
+}
+
+main.main section article:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+main.main section article h1 {
+    font-size: 2.1vw;
+}
+
+article:first-child {
+    background-color: #A5668B;
+}
+
+article:nth-child(2) {
+    background-color: #0E103D;
+}
+
+article:nth-child(3) {
+    background-color: #2541B2;
+}
+
+article:nth-child(4) {
+    background-color: #F55D3E;
+}
