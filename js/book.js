@@ -106,3 +106,13 @@ function removeFlip(currentPage) {
 // Event Listeners on click
 prevBtn.addEventListener("click", goPrevPage);
 nextBtn.addEventListener("click", goNextPage);
+
+// keyboard events
+document.addEventListener("keyup", function (event) {
+    if (event.key == "ArrowRight") {
+        goNextPage();
+    }
+    if (event.key == "ArrowLeft") {
+        goPrevPage();
+    }
+});
