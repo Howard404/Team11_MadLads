@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MadLabs - Secret Lives of Cats</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+</head>
+
+<style>
+    /* Elements and css properties that may be styled for custom design */
+    /* These elements will override the general design *****************************/
+    h1.story-title {
+        /* color: ; enter here*/
+        /*font-size: ; enter here*/
+    }
+
+    .front,
+    .back {
+        /* background-color: firebrick; enter here*/
+        /*color: #fff; enter here*/
+    }
+
+    .front {
+        /* border-left: ; enter here */
+    }
+
+    .back {
+        /* border-left: 5px dotted black; enter here*/
+    }
+
+    main.main-book {
+        /* background-color: ; enter here*/
+        /* font-family: ; enter here */
+        /* font-size: ; enter  here*/
+    }
+
+    button.submit-btn {
+        /* border: 2px solid black; enter here */
+        /* background-color: whitesmoke; enter here */
+        /* font-family:  ; enter here */
+    }
+
+    .book {
+        /* height: 200px; enter here*/
+    }
+
+    input[type="text"] {
+        /*background-color: ; enter here*/
+    }
+
+    /* Page Stack order using Z index property */
+    /* Start from top to bottom (first page to final page and count zIndex) */
+    /* So if there are 5 pages there will be 5 zIndicies to deal with */
+    /* Remember to read HTML file to add correct page number */
+    #p1 {
+        z-index: 5;
+    }
+
+    #p2 {
+        z-index: 4;
+    }
+
+    #p3 {
+        z-index: 3;
+    }
+
+    #p4 {
+        z-index: 2;
+    }
+
+    #p5 {
+        z-index: 1;
+    }
+</style>
+
+<body>
+    <main class="main-book">
+        <!-- Previous Button -->
+        <button id="prev-btn">
+            <i class="fas fa-arrow-circle-left"></i>
+        </button>
+
+        <!-- Book -->
+        <article id="book" class="book">
+            <!-- Page 1 -->
+            <section id="p1" class="paper"><!-- change id to p(n) n for page number-->
+                <div class="front">
+                    <div id="f1" class="front-content"><!-- change id to f(n) n for page number-->
+                        <h1 class="story-title">ENTER YOUR TITLE</h1>
+                        <h3>POF</h3>
+                        <label for="name">POF</label>
+                        <input type="text" data-pof="adjective" />
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content"><!-- change id to b(n) n for page number-->
+                        <h1>POF 1</h1>
+                        <label for="name">POF 1</label>
+                        <input type="text" data-pof="name" />
+                    </div>
+                </div>
+            </section>
+            <!-- Page 2 -->
+            <section id="p2" class="paper"><!-- change id to p(n) n for page number-->
+                <div class="front">
+                    <div id="f2" class="front-content"><!-- change id to f(n) n for page number-->
+                        <h1>POF 2</h1>
+                        <label for="name">POF 2</label>
+                        <input type="text" data-pof="plural noun" />
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content"><!-- change id to b(n) n for page number-->
+                        <h1>POF 3</h1>
+                        <label for="name">POF 3</label>
+                        <input type="text" data-pof="noun" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page 3 -->
+            <section id="p3" class="paper"><!-- change id to p(n) n for page number-->
+                <div class="front">
+                    <div id="f3" class="front-content"><!-- change id to f(n) n for page number-->
+                        <h1>POF 4</h1>
+                        <label for="name">POF 4</label>
+                        <input type="text" data-pof="sound" />
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content"><!-- change id to b(n) n for page number-->
+                        <h1>POF 5</h1>
+                        <label for="name">POF 5</label>
+                        <input type="text" data-pof="verb" />
+                    </div>
+                </div>
+            </section>
+
+            <!-- Page 4-->
+            <section id="p4" class="paper"><!-- change id to p(n) n for page number-->
+                <div class="front">
+                    <div id="f4" class="front-content"><!-- change id to f(n) n for page number-->
+                        <h1>POF 6</h1>
+                        <label for="name">POF 6</label>
+                        <input type="text" data-pof="adjective" />
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b4" class="back-content"> <!-- change id to b(n) n for page number-->
+                        <h1>Almost done</h1>
+                    </div>
+                </div>
+            </section>
+
+            <!--Page 5-->
+            <section id="p5" class="paper"> <!-- change id to p(n) n for page number-->
+                <div class="front">
+                    <div id="f5" class="front-content"> <!-- change id to f(n) n for page number-->
+                        <h1>Let's see..</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b5" class="back-content"> <!-- change id to p(n) n for page number-->
+                        <h1>Submit Story</h1>
+                        <button class="submit-btn">Submit</button>
+                    </div>
+                </div>
+            </section>
+        </article> <!-- Keep pages in this article tag do not go outside of it-->
+
+        <!-- Next Button -->
+        <button id="next-btn">
+            <i class="fas fa-arrow-circle-right"></i>
+        </button>
+    </main>
+
+    <footer class="book-footer">
+        <a href="index.html" class="">Home</a>
+    </footer>
+</body>
+<script src="js/book.js"></script>
+
+</html>

@@ -26,6 +26,9 @@ a {
 
 :root {
     --primary-site-margin: 0.7rem;
+    --light-mode-primary: whitesmoke;
+    --light-mode-border: #333;
+    --light-mode-state-hover: black;
 }
 
 /* Header styling */
@@ -54,9 +57,9 @@ nav.nav-filter {
 
 nav.nav-filter>button {
     outline: 0;
-    border: 1px solid #333;
+    border: 1px solid var(--light-mode-border);
     padding: 0.4rem 0.8rem 0.4rem 0.8rem;
-    background-color: white;
+    background-color: var(--light-mode-primary);
     font-size: 1rem;
     border-radius: 3px;
     margin: 0.333rem;
@@ -64,14 +67,14 @@ nav.nav-filter>button {
 
 nav.nav-filter>button:hover {
     cursor: pointer;
-    background-color: black;
-    color: whitesmoke;
+    background-color: var(--light-mode-state-hover);
+    color: var(--light-mode-primary);
 }
 
 /* Active class actived in JS to change button colors on click*/
 button.btn.active {
-    background-color: black;
-    color: whitesmoke;
+    background-color: var(--light-mode-state-hover);
+    color: var(--light-mode-primary);
 }
 
 /* Main styling */
@@ -92,6 +95,11 @@ main.main section article {
     transition: opacity 500ms ease;
 }
 
+main.main section article a {
+    color: var(--light-mode-primary);
+    font-size: 1.7rem;
+}
+
 main.main section article:hover {
     opacity: 0.8;
     cursor: pointer;
@@ -101,24 +109,151 @@ main.main section article h1 {
     font-size: 2.1vw;
 }
 
-article:first-child {
+section.story-grid article:first-child {
     background-color: #A5668B;
 }
 
-article:nth-child(2) {
+section.story-grid article:nth-child(2) {
     background-color: #0E103D;
 }
 
-article:nth-child(3) {
+section.story-grid article:nth-child(3) {
     background-color: #2541B2;
 }
 
-article:nth-child(4) {
+section.story-grid article:nth-child(4) {
     background-color: #F55D3E;
 }
 
-/********* Roger's UI *********************/
+/* General Book UI ********************************/
 
-/********* Evelyn's UI ********************/
+main.main-book {
+    height: 100vh;
+    display: flex;
+    font-size: 1.7rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--light-mode-primary);
+}
 
-/******** Grant's UI **********************/
+h1.story-title {
+    font-size: 2.6rem;
+    text-align: center;
+}
+
+/* Book */
+.book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+    will-change: tran;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+    /* 3d perspective */
+}
+
+.front,
+.back {
+    background-color: gainsboro;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    /* transform orgin allows*/
+    transition: transform 0.5s;
+    padding: 2rem;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* fixed safari bug use webkit*/
+    border-left: 2px double #333;
+}
+
+.back {
+    z-index: 0;
+    border-left: 5px dotted black;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.back-content {
+    transform: rotateY(180deg);
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    background-color: transparent;
+}
+
+i {
+    font-size: 50px;
+    color: #333;
+}
+
+input[type="text"] {
+    padding: 0.5rem;
+}
+
+button.submit-btn {
+    border: 1px solid black;
+    padding: 0.4rem 1.2rem 0.4rem 1.2rem;
+    font-size: 1.5rem;
+    background-color: var(--light-mode-primary);
+}
+
+footer.book-footer {
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 10px;
+    padding: 1rem;
+}
+
+footer.book-footer a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    padding: 0.4rem 1.2rem 0.4rem 1.2rem;
+    color: #333;
+    font-family: system-ui;
+}
+
+/* Paper flipped effect activated with J.S. */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
