@@ -33,7 +33,7 @@ a {
 
 /* Music button styling */
 
-.music-container{
+.music-container {
     position: relative;
 }
 
@@ -45,7 +45,7 @@ a {
     transition: 0.5s ease;
 }
 
-.music-button:hover{
+.music-button:hover {
     color: white;
     background-color: #0E103D;
     transition: 0.5s ease;
@@ -130,11 +130,11 @@ main.main section article h1 {
 }
 
 section.story-grid article:first-child {
-    background-color: #A5668B;
+    background-color: #223389;
 }
 
 section.story-grid article:nth-child(2) {
-    background-color: #0E103D;
+    background-color: #9d4edd;
 }
 
 section.story-grid article:nth-child(3) {
