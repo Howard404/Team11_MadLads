@@ -19,6 +19,13 @@
     }
     /* Elements and css properties that may be styled for custom design */
     /* These elements will override the general design *****************************/
+    #Home {
+        color: whitesmoke;
+    }
+    #Home:hover{
+        color: black;
+    }
+    
     h1.story-title {
         color: #240046;
         font-family: "Hallo";
@@ -133,9 +140,9 @@
                 </div>
                 <div class="back">
                     <div id="b3" class="back-content"><!-- change id to b(n) n for page number-->
-                        <h1>POF 5</h1>
-                        <label for="name">POF 5</label>
-                        <input type="text" data-pof="verb" />
+                        <h1>Ingresa un adjetivo</h1>
+                        <label for="name">Adjetivo:</label>
+                        <input type="text" data-pof="Adjective" />
                     </div>
                 </div>
             </section>
@@ -144,29 +151,65 @@
             <section id="p4" class="paper"><!-- change id to p(n) n for page number-->
                 <div class="front">
                     <div id="f4" class="front-content"><!-- change id to f(n) n for page number-->
-                        <h1>POF 6</h1>
-                        <label for="name">POF 6</label>
+                        <h1>Ingresa un adjetivo</h1>
+                        <label for="name">Adjetivo:</label>
                         <input type="text" data-pof="adjective" />
                     </div>
                 </div>
                 <div class="back">
-                    <div id="b4" class="back-content"> <!-- change id to b(n) n for page number-->
-                        <h1>Almost done</h1>
+                    <div id="b4" class="back-content"><!-- change id to b(n) n for page number-->
+                        <h1>Ingresa un adjetivo</h1>
+                        <label for="name">Adjetivo:</label>
+                        <input type="text" data-pof="Adjective" />
+                    </div>
+                </div>
+            </section>
+                    <!-- Page 5-->
+            <section id="p5" class="paper"><!-- change id to p(n) n for page number-->
+                <div class="front">
+                    <div id="f5" class="front-content"><!-- change id to f(n) n for page number-->
+                        <h1>Ingresa un verbo</h1>
+                        <label for="name">Verbo:</label>
+                        <input type="text" data-pof="verb" />
+                    </div>
+                </div>
+                    <div class="back">
+                        <div id="b5" class="back-content"><!-- change id to b(n) n for page number-->
+                            <h1>Ingresa un adjetivo</h1>
+                            <label for="name">Adjetivo:</label>
+                            <input type="text" data-pof="Adjective" />
+                        </div>
+                    </div>
+            </section>
+            <!-- Page 6-->
+            <section id="p6" class="paper"><!-- change id to p(n) n for page number-->
+                <div class="front">
+                    <div id="f6" class="front-content"><!-- change id to f(n) n for page number-->
+                        <h1>Ingresa un sustantivo</h1>
+                        <label for="name">Sustantivo:</label>
+                        <input type="text" data-pof="noun" />
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b6" class="back-content"><!-- change id to b(n) n for page number-->
+                        <h1>Ingresa un sustantivo</h1>
+                        <label for="name">Sustantivo:</label>
+                        <input type="text" data-pof="noun" />
                     </div>
                 </div>
             </section>
 
-            <!--Page 5-->
-            <section id="p5" class="paper"> <!-- change id to p(n) n for page number-->
+            <!--Page 7-->
+            <section id="p7" class="paper"> <!-- change id to p(n) n for page number-->
                 <div class="front">
-                    <div id="f5" class="front-content"> <!-- change id to f(n) n for page number-->
-                        <h1>Let's see..</h1>
+                    <div id="f7" class="front-content"> <!-- change id to b(n) n for page number-->
+                        <h1>Ya has terminado</h1>
                     </div>
                 </div>
                 <div class="back">
-                    <div id="b5" class="back-content"> <!-- change id to p(n) n for page number-->
-                        <h1>Submit Story</h1>
-                        <button class="submit-btn">Submit</button>
+                    <div id="b7" class="back-content"> <!-- change id to p(n) n for page number-->
+                        <h1>Enviar Historia</h1>
+                        <button class="submit-btn">Entregar</button>
                     </div>
                 </div>
             </section>
@@ -179,7 +222,7 @@
     </main>
 
     <footer class="book-footer">
-        <a href="index.html" class="">Home</a>
+        <a href="index.html" class="Home" id="Home">Home</a>
     </footer>
 </body>
 <script src="js/book.js"></script>
