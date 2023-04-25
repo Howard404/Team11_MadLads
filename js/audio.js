@@ -7,9 +7,10 @@ const audio5 = new Audio("./assets/fonts/music/cat_song.mp3");
 const audioArr = [audio1, audio2, audio3, audio4, audio5];
 
 const buttons = document.querySelectorAll("button.music-button");
-const buttonClick = document.getElementById("music");
-const page = document.getElementById("title");
+const page = document.querySelector("title");
 const pageTitle = page.innerHTML;
+
+console.log(pageTitle);
 
 audioArr.forEach(audioELement => audioELement.loop = true);
 
@@ -46,7 +47,7 @@ if(pageTitle === "MadLads - Hiking the Mountains")
 if(pageTitle === "MadLads - Robot Apocalypse")
 {
   audio3.play();
-  audio3.volume = .3;
+  audio3.volume = .25;
   buttons.forEach(button => {
     button.addEventListener("click", () => {
       if(audio3.paused){
