@@ -14,15 +14,14 @@
 
 <style>
     @font-face{
-        font-family: "Scary";
-        src: url(../assets/fonts/Scary1.otf) format("openype");
+        font-family: "Hallo";
+        src: url(../assets/fonts/HalloweenSemiBlack-gxDvP.otf) format("opentype");
     }
     /* Elements and css properties that may be styled for custom design */
     /* These elements will override the general design *****************************/
     h1.story-title {
         color: #240046;
-        font-size: 50px;
-        font-family: "Scary";
+        font-family: "Hallo";
     }
 
     .front,
@@ -32,31 +31,25 @@
     }
 
     .front {
-        /* border-left: ; enter here */
+        border-left: 5px dotted black;
     }
 
     .back {
-        /* border-left: 5px dotted black; enter here*/
+        border-left: 5px dotted black;
     }
 
     main.main-book {
         background-color: #9d4edd;
-        font-family: "HalloweenGhost";
-        /* font-size: ; enter  here*/
     }
 
     button.submit-btn {
-        /* border: 2px solid black; enter here */
-        /* background-color: whitesmoke; enter here */
-        /* font-family:  ; enter here */
-    }
-
-    .book {
-        /* height: 200px; enter here*/
+        border: 2px solid black;
+        background-color: whitesmoke;
     }
 
     input[type="text"] {
-        /*background-color: ; enter here*/
+        background-color: whitesmoke; 
+        border: 2px solid black
     }
 
     /* Page Stack order using Z index property */
@@ -97,17 +90,17 @@
             <section id="p1" class="paper"><!-- change id to p(n) n for page number-->
                 <div class="front">
                     <div id="f1" class="front-content"><!-- change id to f(n) n for page number-->
-                        <h1 class="story-title">ENTER YOUR TITLE</h1>
-                        <h3>POF</h3>
-                        <label for="name">POF</label>
+                        <h1 class="story-title">Dia de los Muertos</h1>
+                        <h3>Ingresa un adjetivo</h3>
+                        <label for="name">Adjetivo:</label>
                         <input type="text" data-pof="adjective" />
                     </div>
                 </div>
                 <div class="back">
                     <div id="b1" class="back-content"><!-- change id to b(n) n for page number-->
-                        <h1>POF 1</h1>
-                        <label for="name">POF 1</label>
-                        <input type="text" data-pof="name" />
+                        <h1>Ingresa un sustantivo</h1>
+                        <label for="name">Sustantivo: </label>
+                        <input type="text" data-pof="noun" />
                     </div>
                 </div>
             </section>
@@ -115,15 +108,15 @@
             <section id="p2" class="paper"><!-- change id to p(n) n for page number-->
                 <div class="front">
                     <div id="f2" class="front-content"><!-- change id to f(n) n for page number-->
-                        <h1>POF 2</h1>
-                        <label for="name">POF 2</label>
-                        <input type="text" data-pof="plural noun" />
+                        <h1>Ingresa un sustantivo</h1>
+                        <label for="name">Sustantivo:</label>
+                        <input type="text" data-pof="noun" />
                     </div>
                 </div>
                 <div class="back">
                     <div id="b2" class="back-content"><!-- change id to b(n) n for page number-->
-                        <h1>POF 3</h1>
-                        <label for="name">POF 3</label>
+                        <h1>Ingresa un sustantivo</h1>
+                        <label for="name">Sustantivo:</label>
                         <input type="text" data-pof="noun" />
                     </div>
                 </div>
@@ -133,8 +126,8 @@
             <section id="p3" class="paper"><!-- change id to p(n) n for page number-->
                 <div class="front">
                     <div id="f3" class="front-content"><!-- change id to f(n) n for page number-->
-                        <h1>POF 4</h1>
-                        <label for="name">POF 4</label>
+                        <h1>Ingresa un verbo</h1>
+                        <label for="name">Verbo: </label>
                         <input type="text" data-pof="sound" />
                     </div>
                 </div>
