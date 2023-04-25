@@ -90,9 +90,34 @@
     #p7 {
         z-index: 1;
     }
+
+    /* Music button styling */
+
+    .music-container{
+        position: relative;
+    }
+
+    .music-button {
+        position: absolute;
+        border: 1px solid black;
+        padding: 1em;
+        right: 0;
+        transition: 0.5s ease;
+    }
+
+    .music-button:hover{
+        color: white;
+        background-color: #0E103D;
+        transition: 0.5s ease;
+    }
 </style>
 
 <body>
+
+    <div class="music-container">
+        <button id="music" class="music-button" onload="playMusic()">Music</button>
+    </div>
+    
     <main class="main-book">
         <!-- Previous Button -->
         <button id="prev-btn">
@@ -234,5 +259,6 @@
     </footer>
 </body>
 <script src="js/book.js"></script>
+<script src="js/audio.js"></script>
 
 </html>
