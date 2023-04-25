@@ -5,11 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>MadLabs - Secret Lives of Cats</title>
+    <title>MadLads - Secret Lives of Cats</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/img/favicon.ico">
 </head>
 
 <style>
@@ -77,9 +78,34 @@
     #p5 {
         z-index: 1;
     }
+
+    /* Music button styling */
+
+    .music-container{
+        position: relative;
+    }
+
+    .music-button {
+        position: absolute;
+        border: 1px solid black;
+        padding: 1em;
+        right: 0;
+        transition: 0.5s ease;
+    }
+
+    .music-button:hover{
+        color: white;
+        background-color: #0E103D;
+        transition: 0.5s ease;
+    }
 </style>
 
 <body>
+
+    <div class="music-container">
+        <button id="music" class="music-button" onload="playMusic()">Music</button>
+    </div>
+
     <main class="main-book">
         <!-- Previous Button -->
         <button id="prev-btn">
@@ -185,5 +211,6 @@
     </footer>
 </body>
 <script src="js/book.js"></script>
+<script src="js/audio.js"></script>
 
 </html>
