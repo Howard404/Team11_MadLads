@@ -29,7 +29,7 @@ if(pageTitle === "MadLads")
   });
 }
 
-if(pageTitle === "MadLads - Hiking the Mountains")
+if(pageTitle === "MadLads - Hiking in the Mountains")
 {
   audio2.play();
   audio2.volume = .4;
