@@ -26,10 +26,6 @@
         font-family: 'Bruno Ace SC', cursive;
     }
 
-    main {
-        cursor: url("./assets/img/robot.svg") 16 16, auto;
-    }
-
     h3, h1, label {
         font-family: 'Bruno Ace SC', cursive;
     }
@@ -40,7 +36,14 @@
 
     #footerId {
         color: #fe0ab7;
+        transition: 0.5s ease;
+        border: solid 1px #fe0ab7;
     }
+
+    #footerId:hover {
+       color:  #0afe1e;
+       border-color: #0afe1e;
+    } 
 
     .front,
     .back {
@@ -65,8 +68,11 @@
         /* font-family: ; enter here */
         /* font-size: ; enter  here*/
         background-color: #0E103D;
+        cursor: url("./assets/img/robot.svg") 16 16, auto;
+        /* cursor: url("./assets/img/red_robot.svg") 16 16, auto; */
+        /* background: no-repeat center url("./assets/img/green_background.jpeg"); */
+        background-size: cover;
     }
-
     button.submit-btn {
         /* border: 2px solid black; enter here */
         /* background-color: whitesmoke; enter here */
@@ -131,17 +137,19 @@
 
     .music-button {
         position: absolute;
-        border: 1px solid rgb(255, 255, 255);
+        font-size: 14px;
+        font-weight: 600;
+        border: 1px solid #fe0ab7;
         padding: 1em;
         right: 0;
         transition: 0.5s ease;
-        color: white;
+        color: #fe0ab7;
     }
 
     .music-button:hover{
-        color: rgb(0, 0, 0);
-        background-color: #fe0ab7;
-        border-color: #fe0ab7;
+        color: #0afe1e;;
+        /* background-color: #0afe1e; */
+        border-color: #0afe1e;
         transition: 0.5s ease;
     }
 </style>
@@ -149,7 +157,7 @@
 <body>
 
     <div class="music-container">
-        <button id="music" class="music-button" onload="playMusic()">Music</button>
+        <button id="music" class="music-button">Music</button>
     </div>
 
     <main class="main-book">
