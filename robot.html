@@ -15,8 +15,7 @@
 
 
 <style>
-
-@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
 
     /* Elements and css properties that may be styled for custom design */
     /* These elements will override the general design *****************************/
@@ -26,7 +25,9 @@
         font-family: 'Bruno Ace SC', cursive;
     }
 
-    h3, h1, label {
+    h3,
+    h1,
+    label {
         font-family: 'Bruno Ace SC', cursive;
     }
 
@@ -41,9 +42,9 @@
     }
 
     #footerId:hover {
-       color:  #0afe1e;
-       border-color: #0afe1e;
-    } 
+        color: #0afe1e;
+        border-color: #0afe1e;
+    }
 
     .front,
     .back {
@@ -73,6 +74,7 @@
         /* background: no-repeat center url("./assets/img/green_background.jpeg"); */
         background-size: cover;
     }
+
     button.submit-btn {
         /* border: 2px solid black; enter here */
         /* background-color: whitesmoke; enter here */
@@ -100,31 +102,36 @@
     /* So if there are 5 pages there will be 5 zIndicies to deal with */
     /* Remember to read HTML file to add correct page number */
     #p1 {
-        z-index: 6;
+        z-index: 7;
     }
 
     #p2 {
-        z-index: 5;
+        z-index: 6;
     }
 
     #p3 {
-        z-index: 4;
+        z-index: 5;
     }
 
     #p4 {
-        z-index: 3;
+        z-index: 4;
     }
 
     #p5 {
+        z-index: 3;
+    }
+
+    #p6 {
         z-index: 2;
     }
-    #p6 {
+
+    #p7 {
         z-index: 1;
     }
 
     /* Music button styling */
 
-    .music-container{
+    .music-container {
         position: relative;
     }
 
@@ -139,8 +146,8 @@
         color: #fe0ab7;
     }
 
-    .music-button:hover{
-        color: #0afe1e;;
+    .music-button:hover {
+        color: #0afe1e;
         /* background-color: #0afe1e; */
         border-color: #0afe1e;
         transition: 0.5s ease;
@@ -168,14 +175,14 @@
                         <h1 class="story-title">Robot Apocalypse</h1>
                         <h3>What year is it?</h3>
                         <label for="name">The Year is...</label>
-                        <input type="text" data-pof="year" />
+                        <input type="text" data-pof="year" placeholder="Year in words" required />
                     </div>
                 </div>
                 <div class="back">
                     <div id="b1" class="back-content"><!-- change id to b(n) n for page number-->
                         <h1>Enter an adjective:</h1>
                         <label for="name">Adjective:</label>
-                        <input type="text" data-pof="adjective" />
+                        <input type="text" data-pof="adjective" placeholder="Adjective" required />
                     </div>
                 </div>
             </section>
@@ -185,50 +192,50 @@
                     <div id="f2" class="front-content"><!-- change id to f(n) n for page number-->
                         <h1>Enter a verb:</h1>
                         <label for="name">Verb:</label>
-                        <input type="text" data-pof="verb" />
+                        <input type="text" data-pof="verb" placeholder="Verb" required />
                     </div>
                 </div>
                 <div class="back">
                     <div id="b2" class="back-content"><!-- change id to b(n) n for page number-->
                         <h1>Enter a noun:</h1>
                         <label for="name">Noun:</label>
-                        <input type="text" data-pof="noun" />
+                        <input type="text" data-pof="noun" placeholder="Noun" required />
                     </div>
                 </div>
             </section>
 
-           <!-- Page 4-->
+            <!-- Page 3-->
             <section id="p3" class="paper"><!-- change id to p(n) n for page number-->
                 <div class="front">
                     <div id="f3" class="front-content"><!-- change id to f(n) n for page number-->
                         <h1>Enter a verb:</h1>
                         <label for="name">Verb:</label>
-                        <input type="text" data-pof="verb" />
+                        <input type="text" data-pof="verb2" placeholder="Verb" required />
                     </div>
                 </div>
                 <div class="back">
                     <div id="b3" class="back-content"><!-- change id to b(n) n for page number-->
                         <h1>Enter an adjective:</h1>
                         <label for="name">Adjective:</label>
-                        <input type="text" data-pof="adjective" />
+                        <input type="text" data-pof="adjective2" placeholder="Adjective" required />
                     </div>
                 </div>
             </section>
 
-            <!-- Page 5-->
+            <!-- Page 4-->
             <section id="p4" class="paper"><!-- change id to p(n) n for page number-->
                 <div class="front">
                     <div id="f4" class="front-content"><!-- change id to f(n) n for page number-->
                         <h1>Enter an adjective</h1>
                         <label for="name">Adjective</label>
-                        <input type="text" data-pof="sound" />
+                        <input type="text" data-pof="adjective3" placeholder="Adjective" required />
                     </div>
                 </div>
                 <div class="back">
                     <div id="b4" class="back-content"><!-- change id to b(n) n for page number-->
                         <h1>Enter a verb</h1>
                         <label for="name">Verb:</label>
-                        <input type="text" data-pof="verb" />
+                        <input type="text" data-pof="verb3" placeholder="Verb" required />
                     </div>
                 </div>
             </section>
@@ -239,14 +246,14 @@
                     <div id="f5" class="front-content"><!-- change id to f(n) n for page number-->
                         <h1>Enter an adjective</h1>
                         <label for="name">Adjective</label>
-                        <input type="text" data-pof="adjective" />
+                        <input type="text" data-pof="adjective4" placeholder="Adjective" required />
                     </div>
                 </div>
                 <div class="back">
                     <div id="b5" class="back-content"><!-- change id to b(n) n for page number-->
                         <h1>Enter a verb</h1>
                         <label for="name">Verb:</label>
-                        <input type="text" data-pof="verb" />
+                        <input type="text" data-pof="verb5" />
                     </div>
                 </div>
             </section>
@@ -257,7 +264,7 @@
                     <div id="f6" class="front-content"><!-- change id to f(n) n for page number-->
                         <h1>Enter your name</h1>
                         <label for="name">Name:</label>
-                        <input type="text" data-pof="name" />
+                        <input type="text" data-pof="name" placeholder="name" required />
                     </div>
                 </div>
                 <div class="back">
@@ -267,7 +274,7 @@
                 </div>
             </section>
 
-            <!--Page 5-->
+            <!--Page 7-->
             <section id="p7" class="paper"> <!-- change id to p(n) n for page number-->
                 <div class="front">
                     <div id="f7" class="front-content"> <!-- change id to f(n) n for page number-->
@@ -289,11 +296,23 @@
         </button>
     </main>
 
+    <section class="story-modal">
+        <article class="story-article">
+            <p class="story-p">
+            </p>
+        </article>
+
+        <div class="button-div">
+            <button class="m-btn pdf-btn">Print PDF</button>
+            <button class="m-btn restart-btn">Restart</button>
+        </div>
+    </section>
     <footer class="book-footer">
         <a href="index.html" id="footerId">Home</a>
     </footer>
 </body>
 <script src="js/book.js"></script>
 <script src="js/audio.js"></script>
+<script src="js/app3.js"></script>
 
 </html>
