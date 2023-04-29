@@ -214,8 +214,8 @@ section.paper {
 
 div.front {
     z-index: 1;
-    backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
     border-left: 2px double #333;
 }
 
@@ -308,6 +308,7 @@ section.story-modal {
     justify-content: space-around;
     background-color: whitesmoke;
     transition: opacity 700ms ease-in;
+    box-shadow: 0px 4px 6px 0 hsla(0, 0%, 0%, 0.2);
     opacity: 0;
 }
 
@@ -318,7 +319,7 @@ section.story-modal.active {
 }
 
 article.book.unactive {
-    z-index: -1;
+    z-index: 0;
     opacity: 0;
 }
 
