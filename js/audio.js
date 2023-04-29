@@ -1,5 +1,5 @@
 const audio1 = new Audio("./assets/fonts/music/main_menu.mp3");
-const audio2 = new Audio("./assets/fonts/music/Hiking_Song.wav");
+const audio2 = new Audio("./assets/fonts/music/hiking_song.mp3");
 const audio3 = new Audio("./assets/fonts/music/Robot_Placeholder.mp3");
 const audio4 = new Audio("./assets/fonts/music/dia_song.mp3");
 const audio5 = new Audio("./assets/fonts/music/cat_song.mp3");
@@ -32,7 +32,7 @@ if(pageTitle === "MadLads")
 if(pageTitle === "MadLads - Hiking in the Mountains")
 {
   audio2.play();
-  audio2.volume = .4;
+  audio2.volume = .32;
   buttons.forEach(button => {
     button.addEventListener("click", () => {
       if(audio2.paused){
