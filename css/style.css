@@ -32,7 +32,6 @@ a {
 }
 
 /* Music button styling */
-
 .music-container {
     position: relative;
 }
@@ -114,6 +113,14 @@ main.main section article {
     transition: opacity 500ms ease;
 }
 
+main.main section article p {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 150px;
+}
+
 main.main section article.art {
     position: relative;
 }
@@ -129,13 +136,6 @@ main.main section article.art a {
 main.main section article a {
     color: var(--light-mode-primary);
     font-size: 1.7rem;
-}
-main.main section article p {
-    display: flex;
-    flex-direction:row;
-    text-align: center;
-    margin-top: 200px;
-    margin-left: 150px;
 }
 
 main.main section article:hover {
@@ -164,7 +164,6 @@ section.story-grid article:nth-child(4) {
 }
 
 /* General Book UI ********************************/
-
 main.main-book {
     height: 100vh;
     display: flex;
@@ -172,7 +171,7 @@ main.main-book {
     text-align: center;
     justify-content: center;
     align-items: center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: system-ui;
     background-color: var(--light-mode-primary);
 }
 
@@ -182,7 +181,7 @@ h1.story-title {
 }
 
 /* Book */
-.book {
+article.book {
     position: relative;
     width: 350px;
     height: 500px;
@@ -190,7 +189,7 @@ h1.story-title {
     will-change: tran;
 }
 
-.paper {
+section.paper {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -209,25 +208,23 @@ h1.story-title {
     top: 0;
     left: 0;
     transform-origin: left;
-    /* transform orgin allows*/
     transition: transform 0.5s;
     padding: 2rem;
 }
 
-.front {
+div.front {
     z-index: 1;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-    /* fixed safari bug use webkit*/
     border-left: 2px double #333;
 }
 
-.back {
+div.back {
     z-index: 0;
     border-left: 5px dotted black;
 }
 
-.front-content,
+div.front-content,
 .back-content {
     width: 100%;
     height: 100%;
@@ -237,7 +234,7 @@ h1.story-title {
     flex-direction: column;
 }
 
-.back-content {
+div.back-content {
     transform: rotateY(180deg);
 }
 
@@ -263,6 +260,7 @@ i {
 
 input[type="text"] {
     padding: 0.5rem;
+    font-size: 1rem;
 }
 
 button.submit-btn {
@@ -294,4 +292,61 @@ footer.book-footer a {
 .flipped .front,
 .flipped .back {
     transform: rotateY(-180deg);
+}
+
+/* Story Modal **********************************************/
+section.story-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+    min-height: 360px;
+    padding: 1.7rem;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    background-color: whitesmoke;
+    transition: opacity 700ms ease-in;
+    opacity: 0;
+}
+
+/* J.S. actived classes */
+section.story-modal.active {
+    z-index: 100;
+    opacity: 1;
+}
+
+article.book.unactive {
+    z-index: -1;
+    opacity: 0;
+}
+
+/* Create p element in J.S.  */
+section.story-modal p.story-p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    padding: 0.7rem;
+    color: #333;
+}
+
+section.story-modal div.button-div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+button.m-btn {
+    opacity: 0;
+    transition: opacity 0.8s ease;
+}
+
+button.m-btn.active {
+    opacity: 1;
+}
+
+div.button-div button.pdf-btn,
+button.restart-btn {
+    border: 2px solid #333;
+    padding: 0.33rem 1rem 0.33rem 1rem;
 }
