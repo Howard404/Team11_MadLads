@@ -81,9 +81,21 @@
 
     /* Modal Styling *********************************/
     section.story-modal {
-        border: 2px solid firebrick;
         background-color: rgb(202, 202, 202);
         padding: 1.7rem;
+        box-shadow: 0px 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+        transition: opacity 500ms ease;
+    }
+
+    /* J.S. actived classes option to change animation ETC */
+    section.story-modal.active {
+        /* z-index: 100;
+        opacity: 1; */
+    }
+
+    article.book.unactive {
+        /* z-index: 0;
+        opacity: 0; */
     }
 
     section.story-modal p.story-p {
