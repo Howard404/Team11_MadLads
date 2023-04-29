@@ -130,6 +130,13 @@ main.main section article a {
     color: var(--light-mode-primary);
     font-size: 1.7rem;
 }
+main.main section article p {
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    margin-top: 200px;
+    margin-left: 150px;
+}
 
 main.main section article:hover {
     opacity: 0.8;
