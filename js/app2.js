@@ -8,13 +8,15 @@ const restartBtn = document.querySelector('button.restart-btn');
 const modalBtns = document.querySelectorAll('button.m-btn');
 
 // story with :tokens:
-const storyText = `Once upon a time, a group of :adjective: friends decided to hike
-                    mount :name:. They packed :pnoun:, a :noun:, and put on their hiking boots. 
-                    On the hike, their boots made a ":sound:" sound on the trail. 
-                    At the top, they were amazed by the amazing view of the mountains and valleys. 
-                    They took :adjective2: photos and celebrated their achievement. 
-                    Going down the mountain they sang songs, and talked about the fun on their adventure.
-                    Next time, they will :verb: to the peak of the mountain.
+const storyText = `Hace mucho tiempo, en un(a) :adjective: pueblo de México, 
+                    llegó el Día de los Muertos. La gente preparó altares con :noun:, 
+                    :noun2: y :noun3: para honrar a sus seres queridos que habían :verb:
+                    hace mucho tiempo. Los colores brillantes de las :adjective2: flores de cempasúchil
+                    y las velas :adjective3: iluminaban las calles.
+                    Los niños se disfrazaron con :adjective4: disfraces de calaveras y :verb2: por las calles. 
+                    Las familias comieron :adjective5: comida tradicional,
+                    como tamales y pan de muerto, y bebieron :noun4: caliente.
+                    Todos compartieron historias de sus ;noun5: mientras disfrutaban de la festividad.
                 `;
 /*
     Parses input text values and pushes
@@ -29,10 +31,10 @@ function parseInputs() {
     for (let index = 0; index < inputs.length; index++) {
         let inputValue = inputs[index].value;
         if (isEmpty(inputValue, inputs)) {
-            alert('Please fill in all fields ');
+            alert('Porfavor llena todo las entradas');
             return;
         } else if (!isLetter(inputs[index].value)) {
-            alert('Every character is not a letter');
+            alert('Todo los caracters no son lettras');
             return;
         } else {
             inputValues.push(inputValue);

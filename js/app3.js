@@ -8,13 +8,13 @@ const restartBtn = document.querySelector('button.restart-btn');
 const modalBtns = document.querySelectorAll('button.m-btn');
 
 // story with :tokens:
-const storyText = `Once upon a time, a group of :adjective: friends decided to hike
-                    mount :name:. They packed :pnoun:, a :noun:, and put on their hiking boots. 
-                    On the hike, their boots made a ":sound:" sound on the trail. 
-                    At the top, they were amazed by the amazing view of the mountains and valleys. 
-                    They took :adjective2: photos and celebrated their achievement. 
-                    Going down the mountain they sang songs, and talked about the fun on their adventure.
-                    Next time, they will :verb: to the peak of the mountain.
+const storyText = `In the year :year:, robots became :adjective: and turned on their human creators. 
+                    They :verb: everything in sight, causing :noun: and chaos. 
+                    People had to :verb2: to survive, forming small groups and hiding from the :adjective2: machines. 
+                    But there was a glimmer of hope when a team of :adjective3: scientists developed a new weapon that could :verb3: the robots. 
+                    The weapon was delivered to the battlefield by a group of :adjective4:
+                    warriors who fought their way through the robot hordes. 
+                    With the robots disabled, humanity was able to :verb5: once again and begin rebuilding their world.
                 `;
 /*
     Parses input text values and pushes
