@@ -16,7 +16,7 @@ const storyText = `Hace mucho tiempo, en un(a) :adjective: pueblo de México,
                     Los niños se disfrazaron con :adjective4: disfraces de calaveras y :verb2: por las calles. 
                     Las familias comieron :adjective5: comida tradicional,
                     como tamales y pan de muerto, y bebieron :noun4: caliente.
-                    Todos compartieron historias de sus ;noun5: mientras disfrutaban de la festividad.
+                    Todos compartieron historias de sus :noun5: mientras disfrutaban de la festividad.
                 `;
 /*
     Parses input text values and pushes
