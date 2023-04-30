@@ -351,3 +351,25 @@ button.restart-btn {
     border: 2px solid #333;
     padding: 0.33rem 1rem 0.33rem 1rem;
 }
+
+
+/* Responsive Design */
+
+@media (max-width:780px ) {
+
+    main.main section.story-grid{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    main.main section article {
+        width: 250px;
+        height: 150px;
+        margin: 1em 0 1em;
+    }
+
+    header.main-header img {
+        width: 80%;
+    }
+    
+}
