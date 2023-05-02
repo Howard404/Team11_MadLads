@@ -3,6 +3,8 @@
 */
 const filterButtons = document.querySelectorAll('button.btn');
 const articleTag = Array.from(document.querySelectorAll("article.art"));
+const audio = document.createElement('audio');
+
 /*
     This function loops over all
     filter buttons, and removes their active class
@@ -16,6 +18,9 @@ function changeFilterBtnColor() {
                 btn.classList.remove('active')
             });
             btn.classList.add('active');
+            audio.setAttribute('src', 'assets/fonts/music/plop.mp3')
+            audio.volume = 0.25
+            audio.play()
         })
     })
 }
