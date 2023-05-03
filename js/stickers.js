@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "assets/icons/mountain.svg",
         "assets/icons/robot.svg",
         "assets/icons/skull.svg",
+        "assets/img/logoSVG.svg",
     ]
 
     const stampsTag = document.querySelector('div.icons')
