@@ -410,9 +410,8 @@ section.mobile-buttons {
         width: 80%;
     }
     
-}
 
-section.story-modal {
+    section.story-modal {
     width: 90%;
 }
 
@@ -477,6 +476,7 @@ section.story-modal {
         width: 100%;
         opacity: 1;
     }
+}
 /*parts of speech */
 .tooltip {
     position: relative;
