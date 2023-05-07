@@ -1,3 +1,4 @@
+/* Keyframe animations */
 @keyframes fadein {
     0% {
         opacity: 0;
@@ -7,6 +8,16 @@
     100% {
         opacity: 1;
         transform: translate(0, 0);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
@@ -29,6 +40,23 @@ a {
     --light-mode-primary: whitesmoke;
     --light-mode-border: #333;
     --light-mode-state-hover: black;
+}
+
+/* Sticker icon styling */
+div.icons {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    z-index: -1;
+}
+
+div.icons img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    animation: spin 30s linear infinite;
+    width: 32px;
+    height: 32px;
 }
 
 /* Music button styling */
@@ -79,7 +107,7 @@ nav.nav-filter>button {
     padding: 0.4rem 0.8rem 0.4rem 0.8rem;
     background-color: var(--light-mode-primary);
     font-size: 1rem;
-    border-radius: 3px;
+    border-radius: 0.333rem;
     margin: 0.333rem;
 }
 
@@ -147,27 +175,36 @@ main.main section article h1 {
     font-size: 2.1vw;
 }
 
+article.art {
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 section.story-grid article:nth-child(1) {
     background-color: #223389;
+    background-image: url(/assets/icons/mountain.svg);
 }
 
 section.story-grid article:nth-child(2) {
     background-color: #9d4edd;
+    background-image: url(/assets/icons/skull.svg);
 }
 
 section.story-grid article:nth-child(3) {
     background-color: #2541B2;
+    background-image: url(/assets/icons/robot.svg);
 }
 
 section.story-grid article:nth-child(4) {
-    background-color: #F55D3E;
+    background-color: #80002a;
+    background-image: url(/assets/icons/cat.svg);
 }
 
 /* General Book UI ********************************/
 main.main-book {
     height: 100vh;
     display: flex;
-    font-size: 1.7rem;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -176,7 +213,7 @@ main.main-book {
 }
 
 h1.story-title {
-    font-size: 2.6rem;
+    font-size: clamp(2rem, 4vw + 1rem, 2.7rem);
     text-align: center;
 }
 
@@ -184,32 +221,30 @@ h1.story-title {
 article.book {
     position: relative;
     width: 350px;
-    height: 500px;
-    transition: transform 0.5s;
-    will-change: tran;
+    min-height: 500px;
+    transition: transform 0.5s cubic-bezier(0.39, 0.57, 0.56, 1);
+    will-change: transform;
+    font-size: clamp(1.5rem, 4vw + 0.5rem, 2rem);
 }
 
 section.paper {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    inset: 0;
     perspective: 1500px;
-    /* 3d perspective */
+}
+
+label {
+    font-size: clamp(1rem, 4vw, 2rem);
 }
 
 .front,
 .back {
     background-color: gainsboro;
     position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+    inset: 0;
     transform-origin: left;
     transition: transform 0.5s;
-    padding: 2rem;
+    padding: 1.77rem;
 }
 
 div.front {
@@ -254,19 +289,20 @@ button:hover i {
 }
 
 i {
-    font-size: 50px;
+    font-size: clamp(2rem, 4vw + 0.5rem, 2.3rem);
     color: #333;
 }
 
 input[type="text"] {
     padding: 0.5rem;
     font-size: 1rem;
+    width: 100%;
 }
 
 button.submit-btn {
     border: 1px solid black;
     padding: 0.4rem 1.2rem 0.4rem 1.2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background-color: var(--light-mode-primary);
 }
 
@@ -301,12 +337,12 @@ section.story-modal {
     left: 50%;
     z-index: -1;
     transform: translate(-50%, -50%);
-    min-height: 360px;
+    min-width: 60%;
     padding: 1.7rem;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-around;
-    background-color: whitesmoke;
+    background-color: snow;
     transition: opacity 500ms ease;
     box-shadow: 0px 4px 6px 0 hsla(0, 0%, 0%, 0.2);
     opacity: 0;
@@ -314,7 +350,7 @@ section.story-modal {
 
 /* J.S. actived classes */
 section.story-modal.active {
-    z-index: 100;
+    z-index: 10;
     opacity: 1;
 }
 
@@ -325,8 +361,8 @@ article.book.unactive {
 
 /* Create p element in J.S.  */
 section.story-modal p.story-p {
-    font-size: 1.1rem;
-    line-height: 1.5;
+    font-size: clamp(1.3rem, 2vw + 0.5rem, 1rem);
+    line-height: 1.4;
     padding: 0.7rem;
     color: #333;
 }
@@ -352,12 +388,14 @@ button.restart-btn {
     padding: 0.33rem 1rem 0.33rem 1rem;
 }
 
+section.mobile-buttons {
+    opacity: 0;
+}
 
 /* Responsive Design */
 
-@media (max-width:780px ) {
-
-    main.main section.story-grid{
+@media (max-width:780px) {
+    main.main section.story-grid {
         flex-wrap: wrap;
         justify-content: space-around;
     }
@@ -371,6 +409,7 @@ button.restart-btn {
     header.main-header img {
         width: 80%;
     }
+<<<<<<< HEAD
     
 }
 /*parts of speech */
@@ -412,3 +451,73 @@ button.restart-btn {
     visibility: visible;
     opacity: 1;
   }
+=======
+
+    section.story-modal {
+        width: 90%;
+    }
+
+    section.story-modal {
+        flex-direction: column;
+        padding: 0.7rem;
+    }
+
+    section.story-modal div.button-div {
+        margin-top: 0rem;
+    }
+
+    body {
+        max-width: 100%;
+    }
+
+    main.main-book {
+        overflow-y: hidden;
+        padding: 3rem;
+        overflow-x: hidden;
+    }
+
+    .book h1 {
+        font-size: 1.33rem;
+    }
+
+    .book h3 {
+        font-size: 1.1rem;
+    }
+
+    i {
+        opacity: 0;
+    }
+
+    input[type="text"] {
+        padding: 0.33rem;
+        font-size: 0.7rem;
+        width: 100%;
+    }
+
+    article.book {
+        min-height: 500px;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    button.submit-btn {
+        padding: 0.4rem 1.2rem 0.4rem 1.2rem;
+        font-size: 1rem;
+    }
+
+    section.mobile-buttons {
+        box-shadow: 0px 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+        background-color: whitesmoke;
+        height: 40px;
+        border-left: 5px solid black;
+        position: absolute;
+        left: -50%;
+        z-index: 100;
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        opacity: 1;
+    }
+
+}
+>>>>>>> main

@@ -18,8 +18,6 @@
     /* These elements will override the general design *****************************/
     h1.story-title {
         color: whitesmoke;
-        border: 2px solid whitesmoke;
-        border-radius: 10px;
     }
 
     #mscBtn {
@@ -35,12 +33,8 @@
         color: whitesmoke;
     }
 
-    .book {
-        height: 500px;
-    }
-
     input[type="text"] {
-        background-color: black;
+        background-color: #171717;
         color: whitesmoke;
     }
 
@@ -52,7 +46,7 @@
     .back {
         background-color: #333;
         color: #fff;
-        border-radius: 30px;
+        border-radius: 10px;
     }
 
     main.main-book {
@@ -155,10 +149,13 @@
                     <div id="f1" class="front-content"><!-- change id to f(n) n for page number-->
                         <h1 class="story-title">Hiking in the mountains!</h1>
                         <h3>Enter an adjective</h3>
+<<<<<<< HEAD
                         <div class="tooltip">
                             <label for="name" class="tooltip">Adjective:</label>
                             <span class="tooltiptext">An adjective is a word that describes or modifies a noun or pronoun.</span>
                         </div>
+=======
+>>>>>>> main
                         <input type="text" data-pof="adjective" placeholder="Adjective" required />
                     </div>
                 </div>
@@ -249,6 +246,10 @@
                     </div>
                 </div>
             </section>
+            <section class="mobile-buttons">
+                <button class="prev">Prev</button>
+                <button class="next">Next</button>
+            </section>
         </article> <!-- Keep pages in this article tag do not go outside of it-->
 
         <!-- Next Button -->
@@ -258,11 +259,7 @@
     </main>
 
     <section class="story-modal">
-        <article class="story-article">
-            <p class="story-p">
-            </p>
-        </article>
-
+        <article class="story-article"></article>
         <div class="button-div">
             <button class="m-btn pdf-btn">Print PDF</button>
             <button class="m-btn restart-btn">Restart</button>

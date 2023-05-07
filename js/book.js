@@ -1,5 +1,8 @@
 const prevBtn = document.querySelector("#prev-btn");
 const nextBtn = document.querySelector("#next-btn");
+const mobilePrev = document.querySelector('section.mobile-buttons button.prev');
+const mobileNext = document.querySelector('section.mobile-buttons button.next');
+
 const book = document.querySelector("#book");
 const pages = Array.from(document.querySelectorAll('.paper'));
 
@@ -106,6 +109,10 @@ function removeFlip(currentPage) {
 // Event Listeners on click
 prevBtn.addEventListener("click", goPrevPage);
 nextBtn.addEventListener("click", goNextPage);
+
+// event listeners on touch
+mobilePrev.addEventListener("touchstart", goPrevPage);
+mobileNext.addEventListener("touchstart", goNextPage);
 
 // keyboard events
 document.addEventListener("keyup", function (event) {
