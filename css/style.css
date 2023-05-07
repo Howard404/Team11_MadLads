@@ -477,43 +477,47 @@ section.mobile-buttons {
         opacity: 1;
     }
 }
-/*parts of speech */
+/*parts of speech tool tip DESKTOP*/
 .tooltip {
     position: relative;
     display: inline-block;
     border-bottom: 1px dotted white;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
+}
+
+.tooltip .tooltiptext {
     width: 260px;
     background-color: #555;
     color: #fff;
     text-align: left;
     border-radius: 6px;
-    padding: 2rem;
+    padding: 1.7rem;
     position: absolute;
-    z-index: 1;
-    bottom: 125%;
     left: 30%;
+    bottom: 70%;
     margin-left: -100px;
     opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
+    transition: opacity 300ms ease-in;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
-    top: 100%;
-    left: 45%;
-    margin-left: -5px;
     border-width: 5px;
     border-style: solid;
+    bottom: -5%;
+    left: 45%;
     border-color: #555 transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
+}
 
+span {
+    font-size: 1.3rem;
+}
+
+label:hover {
+    cursor: pointer;
+}
