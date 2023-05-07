@@ -496,7 +496,7 @@ section.mobile-buttons {
     bottom: 70%;
     margin-left: -100px;
     opacity: 0;
-    transition: opacity 300ms ease-in;
+    transition: opacity 300ms;
 }
 
 .tooltip:hover .tooltiptext {
