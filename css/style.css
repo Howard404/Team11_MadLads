@@ -409,10 +409,11 @@ section.mobile-buttons {
     header.main-header img {
         width: 80%;
     }
+    
 
     section.story-modal {
-        width: 90%;
-    }
+    width: 90%;
+}
 
     section.story-modal {
         flex-direction: column;
@@ -475,5 +476,48 @@ section.mobile-buttons {
         width: 100%;
         opacity: 1;
     }
+}
+/*parts of speech tool tip DESKTOP*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted white;
+}
 
+.tooltip .tooltiptext {
+    width: 260px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 1.7rem;
+    position: absolute;
+    left: 30%;
+    bottom: 70%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 200ms ease-in;
+}
+
+.tooltip:hover .tooltiptext {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    border-width: 5px;
+    border-style: solid;
+    bottom: -5%;
+    left: 45%;
+    border-color: #555 transparent transparent transparent;
+}
+
+span {
+    font-size: 1.3rem;
+}
+
+label:hover {
+    cursor: pointer;
 }

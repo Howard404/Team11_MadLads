@@ -19,7 +19,7 @@ const storyText = `	I went downstairs one :timeday:
                  I saw another cat, this one a(n) :color2: tabby.
                   He was wearing a :hat: and stood on his hind legs with his paws on his side. 
                   “What do you think you’re doing? Humans need to be supervised at all times!” 
-                  The other strange cat just :verb: and our cat :verb2:. 
+                  The other strange cat was just :verb: and :verb2:. 
                   “It’s fine, relax. We’re taking a break, besides we just–” 
                   My cat spotted me and we made eye contact. 
                   All of a sudden they dropped into a regular cat posture 
