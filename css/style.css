@@ -183,7 +183,7 @@ article.art {
 
 section.story-grid article:nth-child(1) {
     background-color: #223389;
-    background-image: url(/assets/icons/mountain.svg);
+    background-image: url("/assets/icons/mountain.svg");
 }
 
 section.story-grid article:nth-child(2) {
