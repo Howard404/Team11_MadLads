@@ -201,6 +201,11 @@ section.story-grid article:nth-child(4) {
     background-image: url(/assets/icons/cat.svg);
 }
 
+section.story-grid article:nth-child(5) {
+    background-color: grey;
+    background-image: url(/assets/icons/random.svg);
+}
+
 /* General Book UI ********************************/
 main.main-book {
     height: 100vh;
@@ -409,11 +414,11 @@ section.mobile-buttons {
     header.main-header img {
         width: 80%;
     }
-    
+
 
     section.story-modal {
-    width: 90%;
-}
+        width: 90%;
+    }
 
     section.story-modal {
         flex-direction: column;
@@ -477,6 +482,7 @@ section.mobile-buttons {
         opacity: 1;
     }
 }
+
 /*parts of speech tool tip DESKTOP*/
 .tooltip {
     position: relative;
