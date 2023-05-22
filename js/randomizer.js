@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const pages = [
         {
             copy: "Interjection:<br>Interjections are words or phrases that are used to express strong emotions, feelings, or sudden reactions",

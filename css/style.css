@@ -407,9 +407,8 @@ main.random-main {
 }
 
 main img.random-logo {
-    width: 300px;
-    position: relative;
-    top: 0;
+    max-width: 300px;
+    margin: auto;
 }
 
 a.random-main-btn {
@@ -435,19 +434,10 @@ section.random-section {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    height: 400px;
+    align-items: space-around;
     text-align: center;
-}
-
-section div.circle {
-    background-color: #3e78ed;
-    border-radius: 50%;
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    transition: background-color 0.5s;
 }
 
 section.random-section a {
