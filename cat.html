@@ -52,14 +52,6 @@
         color: black;
     }
 
-    .book {
-        /* height: 200px; enter here*/
-    }
-
-    input[type="text"] {
-        /*background-color: ; enter here*/
-    }
-
     /* Page Stack order using Z index property */
     /* Start from top to bottom (first page to final page and count zIndex) */
     /* So if there are 5 pages there will be 5 zIndicies to deal with */
@@ -222,12 +214,12 @@
                 </div>
                 <div class="back">
                     <div id="b5" class="back-content"><!-- change id to b(n) n for page number-->
-                        <h1>Enter a verb</h1>
+                        <h1>Enter a verb ending in -ing</h1>
                         <div class="tooltip">
                             <label for="name">Verb:</label>
                             <span class="tooltiptext">A verb is a word that expresses an action, occurrence, or state of being. </span>
                         </div>
-                        <input type="text" data-pof="verb" placeholder="Verb" required />
+                        <input type="text" data-pof="verb" placeholder="Verb ending in -ing" required />
                     </div>
                 </div>
             </section>
@@ -235,12 +227,12 @@
             <section id="p6" class="paper"> <!-- change id to p(n) n for page number-->
                 <div class="front">
                     <div id="f6" class="front-content"><!-- change id to f(n) n for page number-->
-                        <h1>Enter a verb</h1>
+                        <h1>Enter a verb ending in -ed</h1>
                         <div class="tooltip">
                             <label for="name">Verb:</label>
                             <span class="tooltiptext">A verb is a word that expresses an action, occurrence, or state of being. </span>
                         </div>
-                        <input type="text" data-pof="verb2" placeholder="Verb" required />
+                        <input type="text" data-pof="verb2" placeholder="Verb ending in -ed" required />
                     </div>
                 </div>
                 <div class="back">
@@ -266,7 +258,8 @@
         <article class="story-article"></article>
 
         <div class="button-div">
-            <button class="m-btn pdf-btn">Print PDF</button>
+            <button class="m-btn pdf-btn" onclick="ToPDF()">Save as PDF</button>
+            <button class="m-btn pdf-btn" onclick="ToPDFBlank()">Save Blank Copy</button>
             <button class="m-btn restart-btn">Restart</button>
         </div>
     </section>
@@ -278,5 +271,7 @@
 <script src="js/book.js"></script>
 <script src="js/audio.js"></script>
 <script src="js/app4.js"></script>
+<script src="js/printShare.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 
 </html>

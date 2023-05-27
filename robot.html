@@ -331,7 +331,8 @@
         <article class="story-article"></article>
 
         <div class="button-div">
-            <button class="m-btn pdf-btn">Print PDF</button>
+            <button class="m-btn pdf-btn" onclick="ToPDF()">Save as PDF</button>
+            <button class="m-btn pdf-btn" onclick="ToPDFBlank()">Save Blank Copy</button>
             <button class="m-btn restart-btn">Restart</button>
         </div>
     </section>
@@ -342,5 +343,7 @@
 <script src="js/book.js"></script>
 <script src="js/audio.js"></script>
 <script src="js/app3.js"></script>
+<script src="js/printShare.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 
 </html>
