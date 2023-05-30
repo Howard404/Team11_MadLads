@@ -50,6 +50,7 @@ auth.createUserWithEmailAndPassword(email, password)
     database_ref.child("user/" + user.uid).set(user_data);
 
     alert("User Created");
+    location.replace("../home.html");
 })
 .catch(function(error){
     var error_code = error.code;
@@ -88,6 +89,7 @@ function login() {
         database_ref.child("user/" + user.uid).update(user_data);
 
         alert("User is logged in");
+        location.replace("../home.html");
     })
     .catch(function(error){
         var error_code = error.code;
