@@ -116,6 +116,8 @@
 </style>
 
 <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v17.0" nonce="kzdz8cSE"></script>
 
     <div class="music-container">
         <button id="music" class="music-button">Music</button>
@@ -313,6 +315,10 @@
             <button class="m-btn pdf-btn" onclick="ToPDF()">Save as PDF</button>
             <button class="m-btn pdf-btn" onclick="ToPDFBlank()">Save Blank Copy</button>
             <button class="m-btn restart-btn">Restart</button>
+            <div class="button-div">
+                <div class="fb-share-button" data-href="https://madlads.netlify.app/dia.html" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmadlads.netlify.app%2Fdia.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-url="https://madlads.netlify.app/dia.html" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </div>
 
     </section>
