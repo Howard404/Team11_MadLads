@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MadLads</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="./assets/img/favicon.ico">
+</head>
+
+<body>
+
+    <div class="music-container">
+        <button id="music" class="music-button">Music</button>
+    </div>
+
+    <header class="main-header">
+        <img src="./assets/img/logoSVG.svg" width="400px">
+        <p>Choose your story</p>
+    </header>
+
+    <nav class="nav-filter">
+        <h3 class="filter-p">Filter by category</h3>
+        <button class="btn" data-filter="all" id="firstBtn">All</button>
+        <button class="btn" data-filter="adventure">Adventure</button>
+        <button class="btn" data-filter="spanish">Spanish/Español</button>
+        <button class="btn" data-filter="action">Action</button>
+        <button class="btn" data-filter="mystery">Mystery</button>
+    </nav>
+
+    <main class="main">
+        <section class="story-grid">
+            <article class="art" data-filter="adventure">
+                <a href="./hiking.html">Hiking the Mountains</a>
+                <p>Ages: 6-8</p>
+            </article>
+
+
+            <article class="art" data-filter="spanish">
+                <a href="./dia.html">Dia De Los Muertos</a>
+                <p>Ages: 10-12</p>
+            </article>
+
+            <article class="art" data-filter="action">
+                <a href="./robot.html">Robot Apocalypse</a>
+                <p>Ages: 13-15</p>
+            </article>
+
+            <article class="art" data-filter="mystery">
+                <a href="./cat.html">Secret Lives of Cats</a>
+                <p>Ages: 6-8</p>
+            </article>
+
+            <article class="art" data-filter="random">
+                <a href="./random.html">Randomizer</a>
+                <p>Learn Parts of Speech</p>
+            </article>
+
+        </section>
+    </main>
+
+    <div class="icons">
+
+    </div>
+
+    <script src="js/ui.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/stickers.js"></script>
+</body>
+
+</html>
