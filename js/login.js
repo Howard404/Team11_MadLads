@@ -50,7 +50,6 @@ auth.createUserWithEmailAndPassword(email, password)
     database_ref.child("user/" + user.uid).set(user_data);
 
     alert("User Created");
-    location.replace("../home.html");
 })
 .catch(function(error){
     var error_code = error.code;
